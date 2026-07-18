@@ -1,0 +1,479 @@
+/* ===================== License Integrity Auditor - Dark Theme ===================== */
+
+* {
+    font-family: "Segoe UI", "Inter", "Roboto", sans-serif;
+    outline: none;
+}
+
+#AppContainer {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+}
+
+/* ---------- Title bar ---------- */
+#TitleBar {
+    background-color: #0a0d12;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+#TitleBarIcon {
+    color: #58a6ff;
+    font-size: 16px;
+}
+
+#TitleBarText {
+    color: #c9d1d9;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+#TitleBarBtn {
+    background: transparent;
+    border: none;
+    color: #8b949e;
+    font-size: 14px;
+    min-width: 42px;
+    max-width: 42px;
+    min-height: 32px;
+    max-height: 32px;
+}
+#TitleBarBtn:hover {
+    background-color: #21262d;
+    color: #f0f6fc;
+}
+#TitleBarCloseBtn {
+    background: transparent;
+    border: none;
+    color: #8b949e;
+    font-size: 14px;
+    min-width: 42px;
+    max-width: 42px;
+    min-height: 32px;
+    max-height: 32px;
+    border-top-right-radius: 14px;
+}
+#TitleBarCloseBtn:hover {
+    background-color: #f85149;
+    color: #ffffff;
+}
+
+/* ---------- General text ---------- */
+QWidget {
+    color: #c9d1d9;
+    background-color: transparent;
+}
+
+#PageTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #f0f6fc;
+}
+#PageSubtitle {
+    font-size: 12px;
+    color: #8b949e;
+}
+
+/* ---------- Buttons ---------- */
+#PrimaryButton {
+    background-color: #238636;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 22px;
+    font-size: 13px;
+    font-weight: 600;
+}
+#PrimaryButton:hover { background-color: #2ea043; }
+#PrimaryButton:disabled { background-color: #21262d; color: #6e7681; }
+
+#SecondaryButton {
+    background-color: #21262d;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 600;
+}
+#SecondaryButton:hover { background-color: #30363d; border-color: #8b949e; }
+
+#DangerButton {
+    background-color: transparent;
+    color: #f85149;
+    border: 1px solid #6e2d2b;
+    border-radius: 8px;
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 600;
+}
+#DangerButton:hover { background-color: #2a1517; }
+
+#AccentButton {
+    background-color: #1f6feb;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 600;
+}
+#AccentButton:hover { background-color: #388bfd; }
+#AccentButton:disabled { background-color: #21262d; color: #6e7681; }
+
+/* ---------- Verdict banner ---------- */
+#VerdictBanner {
+    border-radius: 12px;
+    padding: 4px;
+}
+#VerdictBanner[verdict="genuine"] {
+    background-color: rgba(46, 160, 67, 0.12);
+    border: 1px solid #2ea043;
+}
+#VerdictBanner[verdict="suspect"] {
+    background-color: rgba(210, 153, 34, 0.12);
+    border: 1px solid #d29922;
+}
+#VerdictBanner[verdict="cracked"] {
+    background-color: rgba(248, 81, 73, 0.12);
+    border: 1px solid #f85149;
+}
+#VerdictBanner[verdict="idle"] {
+    background-color: rgba(88, 166, 255, 0.08);
+    border: 1px solid #30363d;
+}
+
+#VerdictTitle { font-size: 18px; font-weight: 800; }
+#VerdictDesc { font-size: 12px; color: #8b949e; }
+#VerdictScore { font-size: 30px; font-weight: 800; }
+
+/* ---------- Cards ---------- */
+#ResultCard {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+}
+#ResultCard:hover {
+    border-color: #58a6ff;
+}
+#CardTitle {
+    font-size: 13px;
+    font-weight: 700;
+    color: #f0f6fc;
+}
+#CardSummary {
+    font-size: 11.5px;
+    color: #8b949e;
+}
+
+/* Badge */
+QLabel#Badge {
+    border-radius: 9px;
+    padding: 2px 10px;
+    font-size: 10.5px;
+    font-weight: 700;
+}
+QLabel#Badge[state="clean"]   { background-color: rgba(46,160,67,0.18);  color: #3fb950; }
+QLabel#Badge[state="warning"] { background-color: rgba(210,153,34,0.18); color: #d29922; }
+QLabel#Badge[state="danger"]  { background-color: rgba(248,81,73,0.18);  color: #f85149; }
+QLabel#Badge[state="unknown"] { background-color: rgba(139,148,158,0.18); color: #8b949e; }
+
+/* ---------- Progress ---------- */
+#ScanProgress {
+    background-color: #21262d;
+    border: none;
+    border-radius: 6px;
+    height: 8px;
+    text-align: center;
+    color: transparent;
+}
+#ScanProgress::chunk {
+    background-color: #58a6ff;
+    border-radius: 6px;
+}
+#ScanStatusLabel {
+    color: #8b949e;
+    font-size: 11.5px;
+}
+
+/* ---------- Scroll area - hidden scrollbar ---------- */
+QScrollArea { border: none; background: transparent; }
+QScrollArea > QWidget > QWidget { background: transparent; }
+
+QScrollBar:vertical {
+    width: 6px;
+    background: transparent;
+    margin: 2px;
+}
+QScrollBar::handle:vertical {
+    background: #30363d;
+    border-radius: 3px;
+    min-height: 30px;
+}
+QScrollBar::handle:vertical:hover { background: #484f58; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0px; }
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical { width: 0px; height: 0px; }
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical { background: transparent; }
+
+QScrollBar:horizontal {
+    height: 0px;
+    background: transparent;
+}
+QScrollBar::handle:horizontal { background: transparent; }
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal { width: 0px; }
+QScrollBar::left-arrow:horizontal, QScrollBar::right-arrow:horizontal { width: 0px; height: 0px; }
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal { background: transparent; }
+
+/* ---------- Sidebar ---------- */
+#Sidebar {
+    background-color: #0a0d12;
+    border-right: 1px solid #21262d;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+#SidebarLogo {
+    font-size: 18px;
+    color: #58a6ff;
+}
+#SidebarLogoText {
+    font-size: 15px;
+    font-weight: 700;
+    color: #f0f6fc;
+}
+#SidebarVersion {
+    font-size: 10px;
+    color: #484f58;
+}
+#SidebarSep {
+    background-color: #21262d;
+    margin: 0 12px;
+}
+#SidebarSepV {
+    background-color: #21262d;
+}
+
+#TabButton {
+    background: transparent;
+    border: none;
+    border-left: 3px solid transparent;
+    color: #6e7681;
+    padding: 10px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 0;
+    text-align: left;
+}
+#TabButton:hover {
+    color: #c9d1d9;
+    background-color: #161b22;
+}
+#TabButton[active="true"] {
+    color: #58a6ff;
+    border-left: 3px solid #58a6ff;
+    background-color: rgba(88, 166, 255, 0.08);
+}
+
+/* ---------- BIOS Key Frame ---------- */
+#BiosKeyFrame {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+}
+#BiosKeyTitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: #f0f6fc;
+}
+#BiosKeyLabel, #WinKeyLabel {
+    font-size: 11px;
+    color: #8b949e;
+    font-weight: 600;
+}
+#BiosKeyValue, #WinKeyValue {
+    font-size: 13px;
+    color: #58a6ff;
+    font-weight: 600;
+}
+#VsLabel {
+    font-size: 14px;
+    font-weight: 800;
+    color: #8b949e;
+    min-width: 30px;
+}
+#KeyStatusLabel {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+#KeyStatusLabel[status="match"] {
+    background-color: rgba(46,160,67,0.12);
+    color: #3fb950;
+}
+#KeyStatusLabel[status="mismatch"] {
+    background-color: rgba(210,153,34,0.12);
+    color: #d29922;
+}
+#KeyStatusLabel[status="error"] {
+    background-color: rgba(248,81,73,0.12);
+    color: #f85149;
+}
+
+/* ---------- Modal overlay & panel ---------- */
+#ModalOverlay {
+    background-color: rgba(1, 4, 9, 0.65);
+}
+#ModalPanel {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+}
+#ModalTitleBar {
+    background-color: #0d1117;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    border-bottom: 1px solid #21262d;
+}
+#ModalTitleText {
+    font-size: 14px;
+    font-weight: 700;
+    color: #f0f6fc;
+}
+#ModalCloseBtn {
+    background: transparent;
+    border: none;
+    color: #8b949e;
+    font-size: 14px;
+    min-width: 30px;
+    max-width: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    border-radius: 15px;
+}
+#ModalCloseBtn:hover { background-color: #f85149; color: #ffffff; }
+
+/* ---------- MessageModal ---------- */
+#MessageModalText {
+    font-size: 13px;
+    color: #c9d1d9;
+    line-height: 1.5;
+}
+
+/* ---------- Finding row ---------- */
+#FindingRow {
+    background-color: #0d1117;
+    border: 1px solid #21262d;
+    border-radius: 8px;
+}
+#FindingRow[severity="danger"]  { border-left: 3px solid #f85149; }
+#FindingRow[severity="warning"] { border-left: 3px solid #d29922; }
+#FindingRow[severity="info"]    { border-left: 3px solid #58a6ff; }
+
+#FindingTitle { font-size: 12.5px; font-weight: 700; color: #f0f6fc; }
+#FindingDetail { font-size: 11.5px; color: #8b949e; }
+
+/* ---------- Tools UI ---------- */
+#ToolPanel { background: transparent; }
+
+#ToolHeader {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+}
+#ToolTitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: #f0f6fc;
+}
+#ToolSubtitle {
+    font-size: 11.5px;
+    color: #8b949e;
+}
+#ToolStatusLabel {
+    font-size: 12px;
+    color: #8b949e;
+}
+#ToolResultLabel {
+    font-size: 13px;
+    color: #3fb950;
+    padding: 8px 12px;
+    background-color: rgba(46,160,67,0.1);
+    border-radius: 6px;
+}
+#ToolSearch {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #c9d1d9;
+    font-size: 13px;
+}
+#ToolSearch:focus {
+    border-color: #58a6ff;
+}
+#ToolTable {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    gridline-color: #21262d;
+    color: #c9d1d9;
+    font-size: 12px;
+}
+#ToolTable::item {
+    padding: 5px 8px;
+}
+#ToolTable::item:selected {
+    background-color: #1f6feb;
+}
+#ToolTable QHeaderView::section {
+    background-color: #0d1117;
+    color: #8b949e;
+    border: none;
+    border-bottom: 1px solid #30363d;
+    padding: 6px 8px;
+    font-weight: 600;
+    font-size: 11px;
+}
+#ToolWarning {
+    background-color: rgba(210,153,34,0.1);
+    border: 1px solid #d29922;
+    border-radius: 8px;
+}
+#ToolWarningText {
+    font-size: 12px;
+    color: #d29922;
+}
+#ToolOutput {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    color: #8b949e;
+    font-family: "Cascadia Code", "Consolas", monospace;
+    font-size: 11px;
+    padding: 8px;
+    selection-background-color: #1f6feb;
+    selection-color: #ffffff;
+}
+#ToolOutput:focus {
+    border-color: #58a6ff;
+}
+#ToolStatusFrame {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+}
+#ToolStatusTitle {
+    font-size: 13px;
+    font-weight: 700;
+    color: #f0f6fc;
+    margin-bottom: 2px;
+}
+
+QToolTip {
+    background-color: #21262d;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
